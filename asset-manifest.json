@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ikeda0768.github.io/todo-app/static/css/main.e3206369.css",
+    "main.js": "/ikeda0768.github.io/todo-app/static/js/main.ac311e22.js",
+    "static/js/453.ac79db8d.chunk.js": "/ikeda0768.github.io/todo-app/static/js/453.ac79db8d.chunk.js",
+    "index.html": "/ikeda0768.github.io/todo-app/index.html",
+    "main.e3206369.css.map": "/ikeda0768.github.io/todo-app/static/css/main.e3206369.css.map",
+    "main.ac311e22.js.map": "/ikeda0768.github.io/todo-app/static/js/main.ac311e22.js.map",
+    "453.ac79db8d.chunk.js.map": "/ikeda0768.github.io/todo-app/static/js/453.ac79db8d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3206369.css",
+    "static/js/main.ac311e22.js"
+  ]
+}
