@@ -1,0 +1,276 @@
+/* ------------------------------
+   全体レイアウト
+------------------------------ */
+.container {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ------------------------------
+   入力フォーム
+------------------------------ */
+.input-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-area input,
+.input-area textarea,
+.input-area select,
+.input-area button {
+  height: 2.6rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+/* メモ欄 */
+.input-area textarea {
+  height: 2.6rem;
+  resize: none;
+}
+
+.input-text {
+  width: 160px;
+}
+
+.input-memo {
+  width: 160px;
+  resize: none;
+}
+
+.input-select {
+  width: 80px;
+}
+
+.input-date {
+  width: 140px;
+}
+
+.add-button {
+  width: 40px;
+  background-color: #eee;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------------------
+   タスクリスト
+------------------------------ */
+.task-list {
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+}
+
+.task-list li {
+  margin-bottom: 1.5rem;
+  list-style: '📝 ';
+}
+
+/* ------------------------------
+   タスクカードレイアウト
+------------------------------ */
+.task-item {
+  margin-bottom: 1.5rem;
+  padding: 0.8rem 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.task-header strong {
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+  display: inline-block;
+}
+
+/* ------------------------------
+   タスク内の情報表示
+------------------------------ */
+.task-date {
+  margin-left: 1rem;
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.task-memo {
+  margin: 0.3rem 0 0 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ------------------------------
+   ボタン：共通
+------------------------------ */
+button {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ✔ 完了 */
+.done-button {
+  background-color: #539600;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.6rem;
+}
+.done-button:hover {
+  background-color: #407a00;
+}
+
+/* ✏ 編集 */
+.edit-button {
+  background-color: #0062B1;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.6rem;
+}
+.edit-button:hover {
+  background-color: #004c89;
+}
+
+/* 📅 翌日に移動 */
+.postpone-button {
+  background-color: #007bff;
+  color: white;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
+}
+.postpone-button:hover {
+  background-color: #0056b3;
+}
+
+/* 📅 指定日へ変更 */
+.edit-date-button {
+  background-color: #f0ad4e;
+  color: white;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
+}
+.edit-date-button:hover {
+  background-color: #ec971f;
+}
+
+/* ✏ 編集・💾 更新・✖ キャンセル */
+.task-buttons-top {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+.task-buttons-top button {
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
+
+}
+
+/* ------------------------------
+   タスクボタン下部
+------------------------------ */
+.task-buttons-bottom {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ------------------------------
+   編集フォーム
+------------------------------ */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+/* ------------------------------
+   タスクがないとき
+------------------------------ */
+.no-tasks {
+  margin-top: 2rem;
+  text-align: center;
+  color: #999;
+  font-size: 1.2rem;
+}
+
+/* ------------------------------
+   スマホ向けレイアウト対応
+------------------------------ */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .input-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-text,
+  .input-memo,
+  .input-select,
+  .input-date,
+  .add-button {
+    width: 100%;
+  }
+
+  .task-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-buttons-top {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .task-header strong {
+    max-width: 100%;
+  }
+}
+
+/* 優先度ごとのタスク枠の色 */
+.task-item.high {
+  border: 2px solid #F44E3B;
+}
+.task-item.medium {
+  border: 2px solid #F89489;
+}
+.task-item.low {
+  border: 2px solid #FCDBD7;
+}
